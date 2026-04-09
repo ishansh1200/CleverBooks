@@ -1,0 +1,25 @@
+.dashboard-wrapper {
+  @apply max-w-7xl mx-auto flex flex-col gap-8 w-full;
+}
+
+.dashboard-wrapper .dashboard-header {
+  @apply flex flex-col gap-1 mb-2;
+}
+
+.dashboard-wrapper .dashboard-title {
+  @apply text-3xl font-semibold tracking-tight;
+  color: var(--text-primary);
+}
+
+.dashboard-wrapper .dashboard-subtitle {
+  @apply text-sm font-medium;
+  color: var(--text-secondary);
+}
+
+.dashboard-wrapper .dashboard-grid {
+  @apply flex flex-col gap-8;
+}
+
+.dashboard-wrapper .dashboard-section {
+  @apply w-full;
+}

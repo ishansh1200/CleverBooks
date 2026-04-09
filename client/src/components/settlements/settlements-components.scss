@@ -1,0 +1,148 @@
+/* --- File Upload Panel --- */
+.upload-panel {
+  @apply p-8 rounded-2xl border transition-all duration-300;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.upload-panel .upload-dropzone {
+  @apply flex flex-col items-center justify-center py-12 px-6 border-2 border-dashed rounded-xl transition-colors;
+  border-color: var(--border-subtle);
+}
+
+.upload-panel .upload-dropzone:hover {
+  border-color: var(--accent-primary);
+  background-color: rgba(79, 70, 229, 0.02); /* Very subtle accent tint */
+}
+
+.upload-panel .dropzone-icon {
+  @apply mb-4 p-4 rounded-full;
+  background-color: var(--bg-main);
+  color: var(--accent-primary);
+}
+
+.upload-panel .dropzone-title {
+  @apply text-lg font-semibold mb-1;
+  color: var(--text-primary);
+}
+
+.upload-panel .dropzone-hint {
+  @apply text-sm mb-6;
+  color: var(--text-secondary);
+}
+
+.upload-panel .btn-browse {
+  @apply px-6 py-2.5 rounded-lg text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-px;
+  background-color: var(--accent-primary);
+}
+
+/* --- Table Panel & Filters --- */
+.table-panel {
+  @apply rounded-2xl border overflow-hidden flex flex-col;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.table-panel .table-header {
+  @apply px-6 py-5 border-b flex flex-col sm:flex-row sm:items-center justify-between gap-4;
+  border-color: var(--border-subtle);
+}
+
+.table-panel .table-title {
+  @apply text-lg font-semibold;
+  color: var(--text-primary);
+}
+
+.table-panel .filter-tabs {
+  @apply flex p-1 rounded-lg border;
+  background-color: var(--bg-main);
+  border-color: var(--border-subtle);
+}
+
+.table-panel .filter-tab {
+  @apply px-4 py-1.5 text-xs font-semibold rounded-md transition-colors;
+  color: var(--text-secondary);
+}
+
+.table-panel .filter-tab:hover {
+  color: var(--text-primary);
+}
+
+.table-panel .filter-tab-active {
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* --- Data Table Grid --- */
+.table-panel .table-container {
+  @apply w-full overflow-x-auto;
+}
+
+.table-panel .data-table {
+  @apply w-full text-left border-collapse text-sm whitespace-nowrap;
+}
+
+.table-panel .data-table th {
+  @apply px-6 py-4 font-medium tracking-wide;
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+[data-theme='dark'] .table-panel .data-table th {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.table-panel .data-table td {
+  @apply px-6 py-4 border-t;
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.table-panel .data-table tr {
+  @apply transition-colors hover:bg-gray-50/50;
+}
+
+[data-theme='dark'] .table-panel .data-table tr {
+  @apply hover:bg-white/5;
+}
+
+/* --- Status Badges --- */
+.table-panel .status-badge {
+  @apply px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase;
+}
+
+.table-panel .badge-matched {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.table-panel .badge-discrepancy {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.table-panel .badge-pending {
+  background-color: rgba(245, 158, 11, 0.1); /* Amber/Yellow tint */
+  color: theme('colors.amber.600');
+}
+
+[data-theme='dark'] .table-panel .badge-pending {
+  color: theme('colors.amber.400');
+}
+
+/* --- Actions --- */
+.table-panel .action-btn {
+  @apply text-sm font-semibold transition-colors;
+  color: var(--accent-primary);
+}
+
+.table-panel .action-btn:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.table-panel .empty-state {
+  @apply py-12 text-center text-sm font-medium;
+  color: var(--text-secondary);
+}

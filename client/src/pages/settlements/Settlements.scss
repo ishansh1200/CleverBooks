@@ -1,0 +1,40 @@
+.settlements-wrapper {
+  @apply max-w-7xl mx-auto flex flex-col gap-8 w-full;
+}
+
+.settlements-wrapper .settlements-header {
+  @apply flex items-center justify-between;
+}
+
+.settlements-wrapper .header-text {
+  @apply flex flex-col gap-1;
+}
+
+.settlements-wrapper .settlements-title {
+  @apply text-3xl font-semibold tracking-tight;
+  color: var(--text-primary);
+}
+
+.settlements-wrapper .settlements-subtitle {
+  @apply text-sm font-medium;
+  color: var(--text-secondary);
+}
+
+.settlements-wrapper .upload-toggle-btn {
+  @apply px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm border transition-all duration-200;
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.settlements-wrapper .upload-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='dark'] .settlements-wrapper .upload-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.settlements-wrapper .settlements-section {
+  @apply w-full;
+}

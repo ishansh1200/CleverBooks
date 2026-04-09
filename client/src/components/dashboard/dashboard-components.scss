@@ -1,0 +1,86 @@
+/* --- Summary Cards --- */
+.summary-container {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.summary-container .summary-card {
+  @apply p-6 rounded-2xl border flex flex-col gap-2 transition-all duration-200 hover:shadow-sm;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.summary-container .summary-label {
+  @apply text-sm font-medium tracking-wide uppercase;
+  color: var(--text-secondary);
+}
+
+.summary-container .summary-value {
+  @apply text-3xl font-bold tracking-tight;
+}
+
+.summary-container .status-error {
+  color: var(--status-error-text);
+}
+
+.summary-container .status-success {
+  color: var(--status-success-text);
+}
+
+.summary-container .status-neutral {
+  color: var(--text-primary);
+}
+
+/* --- Recent Activity Panel --- */
+.activity-panel {
+  @apply rounded-2xl border overflow-hidden;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.activity-panel .activity-header {
+  @apply px-6 py-5 border-b;
+  border-color: var(--border-subtle);
+}
+
+.activity-panel .activity-title {
+  @apply text-lg font-semibold;
+  color: var(--text-primary);
+}
+
+.activity-panel .activity-table-wrapper {
+  @apply w-full overflow-x-auto;
+}
+
+.activity-panel .activity-table {
+  @apply w-full text-left border-collapse text-sm;
+}
+
+.activity-panel .activity-table th {
+  @apply px-6 py-4 font-medium;
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.02); /* Extremely subtle header bg */
+}
+
+/* Dark mode adjustment for table header */
+[data-theme='dark'] .activity-panel .activity-table th {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.activity-panel .activity-table td {
+  @apply px-6 py-4 border-t;
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.activity-panel .activity-table tr {
+  @apply transition-colors hover:bg-gray-50/50;
+}
+
+[data-theme='dark'] .activity-panel .activity-table tr {
+  @apply hover:bg-white/5;
+}
+
+.activity-panel .activity-highlight {
+  color: var(--status-error-text);
+  @apply font-semibold;
+}

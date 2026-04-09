@@ -1,0 +1,133 @@
+.disputes-wrapper {
+  @apply max-w-7xl mx-auto flex flex-col gap-6 w-full;
+}
+
+.disputes-wrapper .disputes-header {
+  @apply flex items-center justify-between mb-2;
+}
+
+.disputes-wrapper .header-text {
+  @apply flex flex-col gap-1;
+}
+
+.disputes-wrapper .disputes-title {
+  @apply text-3xl font-semibold tracking-tight;
+  color: var(--text-primary);
+}
+
+.disputes-wrapper .disputes-subtitle {
+  @apply text-sm font-medium;
+  color: var(--text-secondary);
+}
+
+.disputes-wrapper .export-btn {
+  @apply px-4 py-2 rounded-lg text-sm font-semibold border transition-colors duration-200;
+  background-color: var(--bg-panel);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.disputes-wrapper .export-btn:hover {
+  background-color: var(--bg-main);
+}
+
+/* --- Summary Stats Row --- */
+.disputes-wrapper .disputes-summary {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4 mb-2;
+}
+
+.disputes-wrapper .summary-stat {
+  @apply p-5 rounded-xl border flex flex-col gap-1;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.disputes-wrapper .stat-label {
+  @apply text-xs font-bold tracking-wider uppercase;
+  color: var(--text-secondary);
+}
+
+.disputes-wrapper .stat-value {
+  @apply text-2xl font-bold tracking-tight;
+  color: var(--text-primary);
+}
+
+/* --- Table Area --- */
+.disputes-wrapper .disputes-content {
+  @apply rounded-2xl border overflow-hidden;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.disputes-wrapper .table-container {
+  @apply w-full overflow-x-auto;
+}
+
+.disputes-wrapper .disputes-table {
+  @apply w-full text-left border-collapse text-sm whitespace-nowrap;
+}
+
+.disputes-wrapper .disputes-table th {
+  @apply px-6 py-4 font-medium tracking-wide border-b;
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.015);
+  border-color: var(--border-subtle);
+}
+
+[data-theme='dark'] .disputes-wrapper .disputes-table th {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.disputes-wrapper .disputes-table td {
+  @apply px-6 py-4 border-b;
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.disputes-wrapper .disputes-table tr:last-child td {
+  border-bottom: none;
+}
+
+.disputes-wrapper .disputes-table tr {
+  @apply transition-colors hover:bg-gray-50/50;
+}
+
+[data-theme='dark'] .disputes-wrapper .disputes-table tr {
+  @apply hover:bg-white/5;
+}
+
+/* --- Badges and Buttons --- */
+.disputes-wrapper .dispute-type-badge {
+  @apply px-2.5 py-1 rounded-md text-xs font-medium border;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.disputes-wrapper .status-pill {
+  @apply px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase;
+}
+
+.disputes-wrapper .pill-action_required {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.disputes-wrapper .pill-pending_courier {
+  background-color: rgba(245, 158, 11, 0.1); /* Amber */
+  color: theme('colors.amber.600');
+}
+
+[data-theme='dark'] .disputes-wrapper .pill-pending_courier {
+  color: theme('colors.amber.400');
+}
+
+.disputes-wrapper .resolve-btn {
+  @apply text-sm font-semibold transition-colors;
+  color: var(--accent-primary);
+}
+
+.disputes-wrapper .resolve-btn:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}

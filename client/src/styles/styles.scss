@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Theme Variables --- */
+:root {
+  --bg-main: theme('colors.gray.50');
+  --bg-panel: theme('colors.white');
+  --border-subtle: theme('colors.gray.200');
+  --text-primary: theme('colors.gray.900');
+  --text-secondary: theme('colors.gray.500');
+  --accent-primary: theme('colors.indigo.600');
+  --accent-hover: theme('colors.indigo.700');
+  --status-error-bg: theme('colors.red.50');
+  --status-error-text: theme('colors.red.700');
+  --status-success-bg: theme('colors.emerald.50');
+  --status-success-text: theme('colors.emerald.700');
+}
+
+[data-theme='dark'] {
+  --bg-main: #0a0a0a;
+  /* Deep premium black */
+  --bg-panel: #141414;
+  /* Slightly elevated card color */
+  --border-subtle: #262626;
+  --text-primary: theme('colors.gray.100');
+  --text-secondary: theme('colors.gray.400');
+  --accent-primary: theme('colors.indigo.500');
+  --accent-hover: theme('colors.indigo.400');
+  --status-error-bg: rgba(220, 38, 38, 0.1);
+  --status-error-text: theme('colors.red.400');
+  --status-success-bg: rgba(16, 185, 129, 0.1);
+  --status-success-text: theme('colors.emerald.400');
+}
+
+/* --- Base Elements --- */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  @apply antialiased font-sans transition-colors duration-300 ease-in-out;
+}
+
+/* --- Animations --- */
+@keyframes gracefulFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-graceful {
+  animation: gracefulFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  /* Ensures it stays hidden before animation starts */
+}
+
+/* Stagger delays for child elements */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
