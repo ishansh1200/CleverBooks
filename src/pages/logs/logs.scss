@@ -1,0 +1,101 @@
+.logs-wrapper {
+  @apply max-w-7xl mx-auto flex flex-col gap-6 w-full;
+}
+
+.logs-wrapper .logs-header {
+  @apply flex flex-col gap-1;
+}
+
+.logs-wrapper .logs-title {
+  @apply text-3xl font-semibold tracking-tight;
+  color: var(--text-primary);
+}
+
+.logs-wrapper .logs-subtitle {
+  @apply text-sm font-medium;
+  color: var(--text-secondary);
+}
+
+/* --- Segmented Control Tabs --- */
+.logs-wrapper .logs-tabs {
+  @apply flex p-1 rounded-xl border w-fit;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.logs-wrapper .log-tab-btn {
+  @apply px-6 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200;
+  color: var(--text-secondary);
+}
+
+.logs-wrapper .log-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.logs-wrapper .log-tab-btn.active {
+  background-color: var(--bg-main);
+  color: var(--accent-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+[data-theme='dark'] .logs-wrapper .log-tab-btn.active {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Logs Tables --- */
+.logs-wrapper .logs-content {
+  @apply rounded-2xl border overflow-hidden;
+  background-color: var(--bg-panel);
+  border-color: var(--border-subtle);
+}
+
+.logs-wrapper .log-table-container {
+  @apply w-full overflow-x-auto;
+}
+
+.logs-wrapper .log-table {
+  @apply w-full text-left border-collapse text-sm whitespace-nowrap;
+}
+
+.logs-wrapper .log-table th {
+  @apply px-6 py-4 font-medium tracking-wide border-b;
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.015);
+  border-color: var(--border-subtle);
+}
+
+[data-theme='dark'] .logs-wrapper .log-table th {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.logs-wrapper .log-table td {
+  @apply px-6 py-4 border-b;
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.logs-wrapper .log-table tr:last-child td {
+  border-bottom: none;
+}
+
+.logs-wrapper .log-table tr {
+  @apply transition-colors hover:bg-gray-50/50;
+}
+
+[data-theme='dark'] .logs-wrapper .log-table tr {
+  @apply hover:bg-white/5;
+}
+
+.logs-wrapper .status-badge {
+  @apply px-2.5 py-1 rounded-md text-xs font-bold tracking-wider uppercase;
+}
+
+.logs-wrapper .badge-success {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.logs-wrapper .badge-error {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
