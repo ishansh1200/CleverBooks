@@ -29,7 +29,6 @@ export const App = () => {
           <Route path="/settlements" element={<Settlements />} />
           <Route path="/discrepancies" element={<Discrepancies />} />
           <Route path="/logs" element={<SystemLogs />} />
-          {/* Add more routes later */}
         </Routes>
       </Layout>
     </BrowserRouter>
