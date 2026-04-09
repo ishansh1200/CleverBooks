@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FileUpload } from '../../components/settlements/FileUpload';
 import { SettlementsTable } from '../../components/settlements/SettlementsTable';
 import './Settlements.scss';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DiscrepancyDetail } from '../../components/settlements/DiscrepancyDetail';
 import './discrepancies.scss';
 

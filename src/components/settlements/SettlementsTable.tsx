@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './settlements-components.scss';
 
 type StatusType = 'ALL' | 'MATCHED' | 'DISCREPANCY' | 'PENDING_REVIEW';

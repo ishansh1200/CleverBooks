@@ -1,6 +1,6 @@
 import { SummaryCards } from '../../components/dashboard/SummaryCards';
 import { RecentActivity } from '../../components/dashboard/RecentActivity';
-import './dashboard.scss';
+import './Dashboard.scss';
 
 export const Dashboard = () => {
   return (

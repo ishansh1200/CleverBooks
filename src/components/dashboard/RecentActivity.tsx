@@ -1,4 +1,3 @@
-import React from 'react';
 import './dashboard-components.scss';
 
 export const RecentActivity = () => {
